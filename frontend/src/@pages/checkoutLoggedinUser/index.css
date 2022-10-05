@@ -1,0 +1,50 @@
+@media only screen and (max-width: 500px) {
+    .checkout-display-on-large-screens {
+        display : none;
+    }
+  }
+  
+  @media only screen and (min-width: 501px) {
+    .checkout-display-on-small-screens
+    {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .shipping-display-on-large-screens {
+        display : none;
+    }
+  }
+  
+  @media only screen and (min-width: 401px) {
+    .shipping-display-on-small-screens
+    {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .shipping-card-display-on-large-screens {
+        display : none;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) {
+    .shipping-card-display-on-small-screens
+    {
+        display: none;
+    }
+  }
+
+  @media only screen and (max-width : 768px) {
+    .order_summary_display_on_large_screens {
+      display : none
+    }
+  }
+
+  @media only screen and (min-width : 768px) {
+    .order_summary_display_on_small_screens {
+      display : none
+    }
+  }

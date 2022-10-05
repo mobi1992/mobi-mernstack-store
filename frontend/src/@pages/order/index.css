@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .order_display_on_large_screens {
+    display: none;
+  }
+
+  .order_display_on_small_screens {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .order_display_on_small_screens {
+    display: none;
+  }
+
+  .order_display_on_medium_screens {
+    display: none
+  }
+}
+
+@media screen and (max-width : 767px) {
+  .order_display_on_large_screens {
+    display: none;
+  }
+
+  .order_display_on_medium_screens {
+    display: none;
+  }
+}
+
+.order_image {
+  position : relative
+}
+
+.notify-badge{
+  position: absolute;
+  right:-10px;
+  top:-10px;
+  font-size: 15px;
+  font-family: 'Gentium Book Plus', serif;
+  z-index: 2;
+}
+

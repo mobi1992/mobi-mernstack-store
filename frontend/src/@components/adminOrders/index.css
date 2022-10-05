@@ -1,0 +1,126 @@
+.pos-fixed {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  .pos-rlv {
+      position: relative;
+  }
+
+  @media (max-width: 576px) {
+    .responsive-content-des {
+      font-size: 5vw;
+    }
+  }
+    .image-wrapper-create-prod {
+      position: relative;
+      padding-top: 100%;
+    }
+    
+    .home-img-create-prod {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .create_product_image {
+      position:relative;
+    }
+    .create_product_notify-badge {
+      position:absolute;
+      top:-15px;
+      right:-15px;
+      background-color:teal;
+      color:#fff;
+      padding-top:20px;
+      border-radius: 70px;
+      width:70px;
+      height:70px;
+      text-align:center;
+    }
+
+    /* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(even) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #ccc; 
+		position: relative;
+		padding-left: 50%;
+    text-align: left; 
+	}
+	
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  td:last-child {
+    padding-right: 5vh;
+  }
+}
+
