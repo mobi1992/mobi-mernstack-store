@@ -1,0 +1,132 @@
+
+.footer-con {
+    display: flex;
+}
+
+.footer-con-small-screens {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw
+}
+
+.social-con {
+    display: flex;
+}
+
+.social-icon {
+    display: flex;
+    width : 5vh;
+    height : 5vh;
+    color : white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh 2vh
+}
+
+.footer-center {
+    flex : 1;
+}
+
+.footer-right {
+    flex : 1;
+    padding-left: 1vh;
+}
+
+.footer-ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+
+.footer-ul > a {
+    width : 50%
+}
+.footer-li {
+    width : 50%
+}
+
+
+.contact-item {
+    display : flex;
+    margin-bottom: 2vh;
+    align-items: center;
+}
+
+@media screen and (max-width: 549px) {
+    .footer-display-on-medium-screens
+    {
+        display: none;
+    }
+    .footer-display-on-large-screens {
+        display : none
+    }
+  }
+
+@media screen and (min-width: 550px) and (max-width: 1150px) {
+    .footer-display-on-large-screens {
+        display : none
+    }
+    .footer-display-on-small-screens
+    {
+        display: none;
+    } 
+  }
+
+  @media screen and (min-width: 1151px) {
+    .footer-display-on-medium-screens
+    {
+        display: none;
+    }
+    .footer-display-on-small-screens
+    {
+        display: none;
+    }
+  }
+
+  .footer-con-med-screens {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .footer-li-med-screens {
+    width : 30%
+}
+
+.whatsapp_float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+    
+
+    .whatsapp_float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 30px;
+    }
+}
