@@ -46,7 +46,7 @@ import AdminAllOrders from './admin/adminAllOrders'
 import AdminViewSingleOrder from './admin/adminViewSingleOrder'
 import AdminAllUsers from './admin/adminAllUsers'
 import NewsLetter from '../@components/newsLetter'
-import Footer from '../@components/footer'
+import Footer from '../@components/footer2'
 import UpdateTheAddress from './myAccount/updateAddress'
 import UserAllOrders from './myAccount/userAllOrders'
 const MainApp = () => {
