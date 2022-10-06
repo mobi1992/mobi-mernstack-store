@@ -31,6 +31,7 @@ const ProductDetail = ({ userDetails, isAuthenticated }) => {
     }
 
     const category = sessionStorage.getItem('category')
+    console.log(category)
     console.log("user details", userDetails)
     const { id } = useParams()
     console.log(id)

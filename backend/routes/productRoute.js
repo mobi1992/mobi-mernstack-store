@@ -47,7 +47,7 @@ router.delete('/admin/products/:id', auth, authorizedRole('admin'), deleteProduc
 router.put('/admin/delete/productCategory/:id', auth, authorizedRole('admin'), deleteTheCategory)
 router.put('/delete/admin/relatedProduct/:id', auth, authorizedRole('admin'), deleteTheRelatedProduct)
 router.put('/delete/admin/productReview/:id', auth, authorizedRole('admin'), deleteProductReview)
-router.get('/products/:id', productDetail) 
+router.get('/:id/prod', productDetail) 
 router.put('/product/review/logged-in-user', auth, createProductReviewLoggedinUser)
 router.post('/product/review/unknown-user', createProductReviewUnknownUser)
 router.get('/product/review', getProductReviews)

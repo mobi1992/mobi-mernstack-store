@@ -46,9 +46,7 @@ const sendOrderConfirmationMailUnkUsr = (order) => {
         to : order.shippingInfo.email,
         from : 'yahyaabdullah1877@gmail.com',
         subject : 'Your Order has been confirmed!',
-        text : `Your order #${order.orderNo} has been confirmed! \n\n Total amount is Rs${order.totalPrice} including Rs${order.shippingPrice} shipping price for ${order.cart.totalQty} item/items. \n\n You can view the order confirmation at the following link ${req.protocol}://${req.get(
-            "host"
-        )}/order/${order._id}`
+        text : `Your order #${order.orderNo} has been confirmed! \n\n Total amount is Rs${order.totalPrice} including Rs${order.shippingPrice} shipping price for ${order.cart.totalQty} item/items.`
     })
 }
 

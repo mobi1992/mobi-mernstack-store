@@ -21,8 +21,8 @@ import Error from '../../@components/error'
 const AdminUpdateProduct = ({ categories, catgLoading }) => {
     const dispatch = useDispatch()
     const { product, productSuccess, code} = useSelector(state => state.product)
+    const id = sessionStorage.getItem('id')
 
-    const id = sessionStorage.getItem('id', id)
     useEffect(() => {
         dispatch(getProductDetail(id))
     }, [dispatch])
