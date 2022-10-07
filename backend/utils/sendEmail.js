@@ -41,12 +41,12 @@ const sendPasswordRecoveryMail = (email, message) => {
         text : message
     })
 }
-const sendOrderConfirmationMailUnkUsr = (order) => {
+const sendOrderConfirmationMailUnkUsr = (order, message) => {
     sgMail.send({
         to : order.shippingInfo.email,
         from : 'yahyaabdullah1877@gmail.com',
         subject : 'Your Order has been confirmed!',
-        text : `Your order #${order.orderNo} has been confirmed! \n\n Total amount is Rs${order.totalPrice} including Rs${order.shippingPrice} shipping price for ${order.cart.totalQty} item/items.`
+        text : `Your order #${order.orderNo} has been confirmed! \n\n Total amount is Rs${order.totalPrice} including Rs${order.shippingPrice} shipping price for ${order.cart.totalQty} item/items. \n\n ${message}`
     })
 }
 

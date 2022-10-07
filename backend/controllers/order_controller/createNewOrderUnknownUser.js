@@ -31,7 +31,18 @@ exports.newOrderUnknownUser = async(req,res,next) => {
             })
         
         await order.generateOrderNo()
-        await sendOrderConfirmationMailUnkUsr(order)
+        if (process.env.NODE_ENV === "PRODUCTION") {
+            const message1 = `You can visit your order details by clicking the following link
+            /${req.protocol}://${req.get(
+                "host"
+            )}/order/${order._id}`
+            await sendOrderConfirmationMailUnkUsr(order, message1)
+        }
+        else {
+            const message2 = `You van visit your order details by clicking the following link
+            /${process.env.FRONTEND_URL}/order/${order._id}`
+            await sendOrderConfirmationMailUnkUsr(order, message2)
+        }
         res.status(201).send({
             success : true,
             order

@@ -110,7 +110,7 @@ const AllProducts = ({isAuthenticated}) => {
                             <div style = {{color : 'white', marginLeft: '2vw'}}>All Products</div>
                             <br></br>
                             <div style={{color : 'white', marginLeft: '2vw' }}>Sort Products : <span>
-                                <select onChange={HandleChange} value={val}>
+                                <select style = {{color : 'white'}} onChange={HandleChange} value={val}>
                                     {/* <option disabled selected>sort by price</option> */}
                                     <option>Featured Products</option>
                                     <option>Price, low to high</option>
