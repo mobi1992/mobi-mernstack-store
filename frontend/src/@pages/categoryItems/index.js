@@ -109,7 +109,7 @@ const CategoryItems = ({isAuthenticated}) => {
                             <div style = {{color : 'white', marginLeft: '2vw'}}>{name}</div>
                             <br></br>
                             <div style={{color: 'white', marginLeft: '2vw' }}>Sort Products : <span>
-                                <select style = {{color : 'white'}} onChange={HandleChange} value={val}>
+                                <select style = {{background : 'white'}} onChange={HandleChange} value={val}>
                                     {/* <option disabled selected>sort by price</option> */}
                                     <option>Featured Products</option>
                                     <option>Price, low to high</option>
