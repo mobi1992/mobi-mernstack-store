@@ -16,7 +16,7 @@ export const apis = {
     createNewCatg : async({name}) => axios.post('/admin/categories', {name}, { headers: { Authorization: "Bearer " + await sessionStorage.getItem("AUTH_TOKEN")}}),
     updateCatg : async(id, name) => axios.patch(`/admin/categories/${id}`, {name}, { headers: { Authorization: "Bearer " + await sessionStorage.getItem("AUTH_TOKEN")}}),
     deleteCatg : async(id) => axios.delete(`/admin/categories/${id}`, { headers: { Authorization: "Bearer " + await sessionStorage.getItem("AUTH_TOKEN")}}),
-    getCatgItems : async (name, currentPage, sortBy) => axios.get(`/category/${name}/products?page=${currentPage}&sortBy=${sortBy}`),
+    getCatgItems : async (name, currentPage, sortBy) => axios.get(`/${name}/category/products?page=${currentPage}&sortBy=${sortBy}`),
     login : async({email, password}) => axios.post('/users/login', {email, password}, {headers: { "Content-Type": "application/json" }}),
     getUserDetails : async() => axios.get('/users/me', { headers: { Authorization: "Bearer " + await sessionStorage.getItem("AUTH_TOKEN")}}),
     getAllUsers : async(currentPage) => axios.get(`/admin/users/all?page=${currentPage}`, { headers: { Authorization: "Bearer " + await sessionStorage.getItem("AUTH_TOKEN")}}),

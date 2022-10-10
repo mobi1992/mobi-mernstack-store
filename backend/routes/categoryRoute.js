@@ -9,7 +9,7 @@ const {deleteCategory} = require('../controllers/category_controller/deleteCateg
 const {updateCategory} = require('../controllers/category_controller/updateCategory')
 
 router.get('/categories', getCategories)
-router.get('/category/:name/products', getCategoryProducts)
+router.get('/:name/category/products', getCategoryProducts)
 router.get('/categories/:id', getCategory)
 router.post('/admin/categories', auth, authorizedRole('admin'), createCategory)
 router.delete('/admin/categories/:id', auth, authorizedRole('admin'), deleteCategory)
